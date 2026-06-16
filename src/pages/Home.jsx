@@ -25,16 +25,14 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start py-12 px-4 bg-white dark:bg-gray-900">
-      <div className="w-full container-max mx-auto">
-        <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-gray-900 dark:text-gray-100">Whether App</h1>
-        <SearchBar onSearch={handleSearch} />
+    <main className="py-12 px-4 container-max mx-auto">
+      <h1 className="text-4xl font-semibold mb-6">Whether App</h1>
+      <SearchBar onSearch={handleSearch} />
 
-        <div className="mt-6 space-y-4">
-          {loading && <div className="text-center">Loading…</div>}
-          {error && <div className="text-center text-red-500">{error}</div>}
-          {data && <WeatherCard data={data} />}
-        </div>
+      <div className="mt-6 space-y-4">
+        {loading && <div className="text-center">Loading…</div>}
+        {error && <div className="text-center text-red-500">{error}</div>}
+        {data && <WeatherCard data={data} />}
       </div>
     </main>
   )
